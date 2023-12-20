@@ -26,7 +26,6 @@ export async function generateMetadata({
 export default async function UserPage({ params: { userId } }: Params) {
   const userData: Promise<User> = getUser(userId);
   const userPostsData: Promise<Posts[]> = getUserPosts(userId);
-
   //const [user, userPosts] = await Promise.all([userData, userPostsData]);
 
   const user = await userData;
